@@ -5,23 +5,24 @@
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <menu name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contacts</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <header class="header">
+            <nav>
+                <a href="index.html" class="logo">THOBILE.</a>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="contacts.html" class="active">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
         <div class="contact-hero">
-            <header class="header">
-                <nav>
-                    <a href="index.html" class="logo">THOBILE.</a>
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="services.html">SERVICES</a></li>
-                        <li><a href="projects.html">PROJECTS</a></li>
-                        <li><a href="contacts.html" class="active">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </header>
+            
             <div id="contacts">
                 <h2>CONTACT<span> FORM</span></h2><br><br>
                 <p>For any enquiry or information, please send an email for assistance.</p><br><br>
@@ -43,5 +44,15 @@
              All Rights Reserved</p>
             </footer>
         </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const menuIcon = document.getElementById('menu-icon');
+                const navList = document.querySelector('.nav-list');
+            
+                menuIcon.addEventListener('click', () => {
+                    navList.classList.toggle('active');
+                });
+            });
+            </script>
     </body>
 </html>
